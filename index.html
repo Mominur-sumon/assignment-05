@@ -17,22 +17,45 @@
 
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              fontFamily: {
-                lexend: ['Lexend', 'sans-serif'],
-              },
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        navBG: "rgb(249, 247, 243)",
+                        btnPrimary: "#B4F461"
+                    },
+                    fontFamily: {
+                        lexend: ['Lexend', 'sans-serif'],
+                    },
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
 
 <body class="font-lexend">
-    <h3 class="text-3xl">assignment 5</h3>
+    <nav class=" container mx-auto py-5">
+        <div class="bg-navBG flex flex-col md:flex-row justify-center md:justify-around items-center gap-4 py-7 rounded-lg">
+            <div>
+                <button class="bg-btnPrimary px-5 py-2 rounded-xl text-xl font-bold">Blog</button>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/logo.png" alt="">
+                <h3 class="text-xl font-bold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/coin.png" alt="">
+                <h3 class="text-xl font-semibold opacity-80"><span>5500</span> BDT</h3>
+            </div>
+        </div>
+
+        <div class="flex  gap-5 justify-center my-5">
+            <button class="bg-btnPrimary px-5 py-2 rounded-xl text-xl font-bold border-2">Donation</button>
+            <button class="text-xl font-semibold opacity-80 border-2 px-5 py-2 rounded-lg">History</button>
+        </div>
+
+    </nav>
+
 
 
 
