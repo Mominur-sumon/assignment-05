@@ -37,7 +37,7 @@ const donateNoakhali = document.getElementById("donate-noakhali");
 donateNoakhali.addEventListener("click", function () {
 
     const donateAmount = inputvalueByID("amount-noakhali");
-    if (donateAmount < 0) {
+    if (donateAmount <= 0) {
         alert("Please enter a valid amount");
         return;
     }
@@ -70,7 +70,7 @@ donateNoakhali.addEventListener("click", function () {
 document.getElementById("donate-feni").addEventListener("click", function () {
 
     const donateAmount = inputvalueByID("amount-feni");
-    if (donateAmount < 0) {
+    if (donateAmount <= 0) {
         alert("Please enter a valid amount");
         return;
     }
@@ -101,7 +101,7 @@ document.getElementById("donate-feni").addEventListener("click", function () {
 document.getElementById("donate-qouta").addEventListener("click", function () {
 
     const donateAmount = inputvalueByID("amount-qouta");
-    if (donateAmount < 0) {
+    if (donateAmount <= 0) {
         alert("Please enter a valid amount");
         return;
     }
