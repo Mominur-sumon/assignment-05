@@ -39,10 +39,12 @@ donateNoakhali.addEventListener("click", function () {
     const donateAmount = inputvalueByID("amount-noakhali");
     if (donateAmount <= 0) {
         alert("Please enter a valid amount");
+        document.getElementById("amount-noakhali").value = "";
         return;
     }
     else if (donateAmount > grandTotalEl) {
         alert("You don't have enough balance to donate this amount");
+        document.getElementById("amount-noakhali").value = "";
         return;
     }
     else {
@@ -56,13 +58,15 @@ donateNoakhali.addEventListener("click", function () {
 
 
         const div = document.createElement('div');
-        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-3");
-        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount} Taka is donated for Donate for Flood at Noakhali, Bangladesh</h2>
+        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-5", "space-y-2");
+        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount.toFixed(2)} Taka is donated for Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="text-md opacity-80">Date: ${Date()} </p>`
         console.log(div);
         historySection.insertBefore(div, historySection.firstChild);
 
     }
+    
+    document.getElementById("amount-noakhali").value = "";
 
 });
 
@@ -72,10 +76,12 @@ document.getElementById("donate-feni").addEventListener("click", function () {
     const donateAmount = inputvalueByID("amount-feni");
     if (donateAmount <= 0) {
         alert("Please enter a valid amount");
+        document.getElementById("amount-feni").value = "";
         return;
     }
     else if (donateAmount > grandTotalEl) {
         alert("You don't have enough balance to donate this amount");
+        document.getElementById("amount-feni").value = "";
         return;
     }
     else {
@@ -87,13 +93,13 @@ document.getElementById("donate-feni").addEventListener("click", function () {
         document.getElementById("grand-total").innerText = grandTotalEl.toFixed(2);
 
         const div = document.createElement('div');
-        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-3");
-        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount} Taka is donated for Donate for Flood Relief in Feni,Bangladesh</h2>
+        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-5", "space-y-2");
+        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount.toFixed(2)} Taka is donated for Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-md opacity-80">Date: ${Date()} </p>`
         console.log(div);
         historySection.insertBefore(div, historySection.firstChild);
     }
-
+    document.getElementById("amount-feni").value = "";
 
 });
 
@@ -103,10 +109,12 @@ document.getElementById("donate-qouta").addEventListener("click", function () {
     const donateAmount = inputvalueByID("amount-qouta");
     if (donateAmount <= 0) {
         alert("Please enter a valid amount");
+        document.getElementById("amount-qouta").value = "";
         return;
     }
     else if (donateAmount > grandTotalEl) {
         alert("You don't have enough balance to donate this amount");
+        document.getElementById("amount-qouta").value = "";
         return;
     }
     else {
@@ -118,12 +126,12 @@ document.getElementById("donate-qouta").addEventListener("click", function () {
         document.getElementById("grand-total").innerText = grandTotalEl.toFixed(2);
 
         const div = document.createElement('div');
-        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-3");
-        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount} Taka is donated for Aid for Injured in the Quota Movement</h2>
+        div.classList.add("w-11/12", "mx-auto", "border-2", "rounded-lg", "shadow-xl", "px-5", "py-5 space-y-2");
+        div.innerHTML = ` <h2 class="text-xl font-semibold opacity-90">${donateAmount.toFixed(2)} Taka is donated for Aid for Injured in the Quota Movement</h2>
                     <p class="text-md opacity-80">Date: ${Date()} </p>`
         console.log(div);
         historySection.insertBefore(div, historySection.firstChild);
     }
-
+    document.getElementById("amount-qouta").value = "";
 
 });
